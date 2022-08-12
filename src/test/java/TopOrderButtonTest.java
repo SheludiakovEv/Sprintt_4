@@ -1,19 +1,23 @@
 import org.junit.Test;
-import ru.qaScooter.praktikumServices.HomeLocator;
-import ru.qaScooter.praktikumServices.PageObjectListOne;
-import ru.qaScooter.praktikumServices.PageObjectListTwo;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.PageFactory;
+import ru.qascooter.praktikumservices.HomeLocator;
+import ru.qascooter.praktikumservices.PageObjectListOne;
+import ru.qascooter.praktikumservices.PageObjectListTwo;
 
 import java.time.Duration;
 
 import static org.junit.Assert.assertTrue;
 
-public class TopButtonOrderTest extends BaseTest {
+public class TopOrderButtonTest extends BaseTest {
 
 @Test  //Тест верхней кнопки "Заказать" с первыми данными.
     public void TopButtonOrder() {
 
     PageObjectListOne pageObject = new PageObjectListOne(driver);
+    PageFactory.initElements(driver, pageObject);
     PageObjectListTwo pageObjectListTwo = new PageObjectListTwo(driver);
+    PageFactory.initElements(driver, pageObjectListTwo);
     pageObject.open();
     pageObject.clickTopButtonOrder();
     pageObject.personalDate("Иван", "Петров", "Москва", "79857856543");
@@ -26,7 +30,7 @@ public class TopButtonOrderTest extends BaseTest {
     pageObjectListTwo.commentForDelivery("Привет доставка!");
     pageObjectListTwo.clickConfirmOrderButton();
     pageObjectListTwo.clickButtonYes();
-    boolean result = driver.findElement(pageObjectListTwo.finishModalWindow).isDisplayed();
+    boolean result = pageObjectListTwo.finishModalWindow.isDisplayed();
     assertTrue(result);
 }
 
@@ -34,9 +38,12 @@ public class TopButtonOrderTest extends BaseTest {
     public void lowButtonOrder() {
 
     HomeLocator homeLocator = new HomeLocator(driver);
+    PageFactory.initElements(driver, homeLocator);
 
         PageObjectListOne pageObject = new PageObjectListOne(driver);
+        PageFactory.initElements(driver, pageObject);
         PageObjectListTwo pageObjectListTwo = new PageObjectListTwo(driver);
+        PageFactory.initElements(driver, pageObjectListTwo);
         pageObject.open();
         homeLocator.scrollToimportantQuestionsDiv();
         pageObject.clickLowButtonOrder();
@@ -50,7 +57,7 @@ public class TopButtonOrderTest extends BaseTest {
         pageObjectListTwo.commentForDelivery("Доставка, где самокат?");
         pageObjectListTwo.clickConfirmOrderButton();
         pageObjectListTwo.clickButtonYes();
-        boolean result = driver.findElement(pageObjectListTwo.finishModalWindow).isDisplayed();
+        boolean result = pageObjectListTwo.finishModalWindow.isDisplayed();
         assertTrue(result);
 
 

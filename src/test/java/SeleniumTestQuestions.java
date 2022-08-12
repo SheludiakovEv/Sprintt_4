@@ -1,7 +1,8 @@
 
 import org.junit.Test;
 import org.openqa.selenium.By;
-import ru.qaScooter.praktikumServices.HomeLocator;
+import org.openqa.selenium.support.PageFactory;
+import ru.qascooter.praktikumservices.HomeLocator;
 
 import static org.junit.Assert.assertEquals;
 
@@ -12,6 +13,7 @@ public class SeleniumTestQuestions extends BaseTest {
     public void testFirstQuestion() {
 
         HomeLocator homeLocator = new HomeLocator(driver);
+        PageFactory.initElements(driver, homeLocator);
         homeLocator.openPage();  //открыл страницу приложения
         homeLocator.scrollToimportantQuestionsDiv(); //скролл до элемента
 
@@ -25,6 +27,7 @@ public class SeleniumTestQuestions extends BaseTest {
     public void testSecondQuestion() {
 
         HomeLocator homeLocator = new HomeLocator(driver);
+        PageFactory.initElements(driver, homeLocator);
         homeLocator.openPage();
         homeLocator.scrollToimportantQuestionsDiv();
 
@@ -38,6 +41,7 @@ public class SeleniumTestQuestions extends BaseTest {
     public void testThirdQuestion() {
 
         HomeLocator homeLocator = new HomeLocator(driver);
+        PageFactory.initElements(driver, homeLocator);
         homeLocator.openPage();
         homeLocator.scrollToimportantQuestionsDiv();
 
@@ -52,6 +56,7 @@ public class SeleniumTestQuestions extends BaseTest {
     public void testFourthQuestion() {
 
         HomeLocator homeLocator = new HomeLocator(driver);
+        PageFactory.initElements(driver, homeLocator);
         homeLocator.openPage();
         homeLocator.scrollToimportantQuestionsDiv();
 
@@ -64,6 +69,7 @@ public class SeleniumTestQuestions extends BaseTest {
     @Test
     public void testFifthQuestion() {
         HomeLocator homeLocator = new HomeLocator(driver);
+        PageFactory.initElements(driver, homeLocator);
         homeLocator.openPage();
         homeLocator.scrollToimportantQuestionsDiv();
 
@@ -77,6 +83,7 @@ public class SeleniumTestQuestions extends BaseTest {
     @Test
     public void testSixthQuestion() {
         HomeLocator homeLocator = new HomeLocator(driver);
+        PageFactory.initElements(driver, homeLocator);
         homeLocator.openPage();
         homeLocator.scrollToimportantQuestionsDiv();
 
@@ -89,6 +96,7 @@ public class SeleniumTestQuestions extends BaseTest {
     @Test
     public void testSeventhQuestion() {
         HomeLocator homeLocator = new HomeLocator(driver);
+        PageFactory.initElements(driver, homeLocator);
         homeLocator.openPage();
         homeLocator.scrollToimportantQuestionsDiv();
 
@@ -103,6 +111,7 @@ public class SeleniumTestQuestions extends BaseTest {
     @Test
     public void testEightQuestion() {
         HomeLocator homeLocator = new HomeLocator(driver);
+        PageFactory.initElements(driver, homeLocator);
         homeLocator.openPage();
         homeLocator.scrollToimportantQuestionsDiv();
 
