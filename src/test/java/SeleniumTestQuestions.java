@@ -10,7 +10,6 @@ public class SeleniumTestQuestions extends BaseTest {
 
     @Test
     public void testFirstQuestion() {
-
         MainPage mainPage = new MainPage(driver);
         PageFactory.initElements(driver, mainPage);
         mainPage.openPage();  //открыл страницу приложения
@@ -23,7 +22,6 @@ public class SeleniumTestQuestions extends BaseTest {
 
     @Test
     public void testSecondQuestion() {
-
         MainPage mainPage = new MainPage(driver);
         PageFactory.initElements(driver, mainPage);
         mainPage.openPage();
@@ -37,7 +35,6 @@ public class SeleniumTestQuestions extends BaseTest {
 
     @Test
     public void testThirdQuestion() {
-
         MainPage mainPage = new MainPage(driver);
         PageFactory.initElements(driver, mainPage);
         mainPage.openPage();
@@ -50,7 +47,6 @@ public class SeleniumTestQuestions extends BaseTest {
 
     @Test
     public void testFourthQuestion() {
-
         MainPage mainPage = new MainPage(driver);
         PageFactory.initElements(driver, mainPage);
         mainPage.openPage();
@@ -63,7 +59,6 @@ public class SeleniumTestQuestions extends BaseTest {
 
     @Test
     public void testFifthQuestion() {
-
         MainPage mainPage = new MainPage(driver);
         PageFactory.initElements(driver, mainPage);
         mainPage.openPage();
@@ -76,7 +71,6 @@ public class SeleniumTestQuestions extends BaseTest {
 
     @Test
     public void testSixthQuestion() {
-
         MainPage mainPage = new MainPage(driver);
         PageFactory.initElements(driver, mainPage);
         mainPage.openPage();
@@ -89,7 +83,6 @@ public class SeleniumTestQuestions extends BaseTest {
 
     @Test
     public void testSeventhQuestion() {
-
         MainPage mainPage = new MainPage(driver);
         PageFactory.initElements(driver, mainPage);
         mainPage.openPage();
@@ -102,7 +95,6 @@ public class SeleniumTestQuestions extends BaseTest {
 
     @Test
     public void testEightQuestion() {
-
         MainPage mainPage = new MainPage(driver);
         PageFactory.initElements(driver, mainPage);
         mainPage.openPage();

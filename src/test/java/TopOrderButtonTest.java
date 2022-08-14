@@ -12,9 +12,9 @@ public class TopOrderButtonTest extends BaseTest {
 
     @Test  //Тест верхней кнопки "Заказать" с первыми данными.
     public void TopButtonOrder() {
-
         OrderPage_Stage1 pageObject = new OrderPage_Stage1(driver);
         PageFactory.initElements(driver, pageObject);
+
         OrderPage_Stage2 orderPageStage2 = new OrderPage_Stage2(driver);
         PageFactory.initElements(driver, orderPageStage2);
         pageObject.open();
@@ -35,7 +35,6 @@ public class TopOrderButtonTest extends BaseTest {
 
     @Test   //Тест нижней кнопки "Заказать" со вторыми данными
     public void lowButtonOrder() {
-
         MainPage mainPage = new MainPage(driver);
         PageFactory.initElements(driver, mainPage);
 
