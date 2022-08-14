@@ -18,10 +18,8 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
 
-
     @After
     public void tearDown() {
         driver.quit();
     }
-
 }

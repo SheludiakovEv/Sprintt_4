@@ -1,33 +1,28 @@
 package ru.qascooter.praktikumservices;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HomeLocator {
+public class MainPage {
 
-
-    public HomeLocator(WebDriver driver) {
+    public MainPage(WebDriver driver) {
         this.driver = driver;
-
     }
 
     private WebDriver driver;
 
     //Локатор до которого скроллить. Группа текста "Вопросы о важном"
-
-    @FindBy(xpath = ".//div[starts-with(@class,'Home_FourPart')]/div[starts-with(@class,'Home_SubHeader')]")  //скролл до нужного элемента
+    @FindBy(xpath = ".//div[starts-with(@class,'Home_FourPart')]/div[starts-with(@class,'Home_SubHeader')]")
+    //скролл до нужного элемента
     private WebElement skrollQuestionsDiv;
 
     //Блок FAQ
-
     //Вопрос 1
-    @FindBy (xpath = "//*[@id=\"accordion__heading-0\"]")
+    @FindBy(xpath = "//*[@id=\"accordion__heading-0\"]")
     private WebElement buttonFirstQuestion; //Первый вопрос в блоке Вопросы о важном
     public String expectedFirstQuestionText = "Сутки — 400 рублей. Оплата курьеру — наличными или картой.";//ОЖ текст первого вопроса.
-
 
     //Вопрос 2
     @FindBy(xpath = "//*[@id=\"accordion__heading-1\"]")
@@ -63,12 +58,6 @@ public class HomeLocator {
     @FindBy(id = "accordion__heading-7")
     private WebElement buttonEightQuestion; //лик по восьмому вопросу
     public String expectedEightQuestionText = "Да, обязательно. Всем самокатов! И Москве, и Московской области."; //ОЖ текст 8-го вопроса
-
-
-
-
-
-
 
     //Методы для использования в тестах
     public void scrollToimportantQuestionsDiv() { //скроллю до элемента FAQ
@@ -110,6 +99,4 @@ public class HomeLocator {
     public void clickButtonEightQuestion() {  //Кликаем по восьмому вопросу
         buttonEightQuestion.click();
     }
-
-
 }

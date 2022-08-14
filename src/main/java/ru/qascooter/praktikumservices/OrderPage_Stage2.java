@@ -1,9 +1,10 @@
 package ru.qascooter.praktikumservices;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class PageObjectListTwo {
+public class OrderPage_Stage2 {
 
     WebDriver driver;
 
@@ -33,9 +34,10 @@ public class PageObjectListTwo {
     @FindBy(xpath = ".//div[@class = 'Order_ModalHeader__3FDaJ']")
     public WebElement finishModalWindow; //текст модального окна успешного оформления
 
-    public PageObjectListTwo(WebDriver driver){
+    public OrderPage_Stage2(WebDriver driver) {
         this.driver = driver;
     }
+
     public void clickOrderDate() {   //выбрал конкретную дату доставки самоката
         orderDate.click();
         exactDate.click();
@@ -50,7 +52,7 @@ public class PageObjectListTwo {
         colorScooterBlack.click();
     }
 
-    public void setCommentDelivery(String comment){  //комент
+    public void setCommentDelivery(String comment) {  //комент
         commentDelivery.sendKeys(comment);
     }
 
@@ -66,14 +68,12 @@ public class PageObjectListTwo {
         buttonYes.click();
     }
 
-
     //Работа со второй заявкой
 
     public void clickOrderDate2() {   //выбрал конкретную дату доставки самоката для заказа через нижнюю кнопку
         orderDate.click();
         exactDate2.click();
     }
-
 
     public void clickColorScooterGrey() { //цвет самоката серый
         colorScooterGrey.click();
@@ -83,5 +83,4 @@ public class PageObjectListTwo {
         rentPeriod.click();
         rentPeriodInDay2.click();
     }
-
 }

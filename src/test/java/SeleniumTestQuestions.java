@@ -2,122 +2,114 @@
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
-import ru.qascooter.praktikumservices.HomeLocator;
+import ru.qascooter.praktikumservices.MainPage;
 
 import static org.junit.Assert.assertEquals;
 
 public class SeleniumTestQuestions extends BaseTest {
 
-
     @Test
     public void testFirstQuestion() {
 
-        HomeLocator homeLocator = new HomeLocator(driver);
-        PageFactory.initElements(driver, homeLocator);
-        homeLocator.openPage();  //открыл страницу приложения
-        homeLocator.scrollToimportantQuestionsDiv(); //скролл до элемента
+        MainPage mainPage = new MainPage(driver);
+        PageFactory.initElements(driver, mainPage);
+        mainPage.openPage();  //открыл страницу приложения
+        mainPage.scrollToimportantQuestionsDiv(); //скролл до элемента
 
-        homeLocator.clickButtonFirstQuestion();  //кликает в тесте по перовму вопросу
+        mainPage.clickButtonFirstQuestion();  //кликает в тесте по перовму вопросу
         String firstQuestionText = driver.findElement(By.id("accordion__panel-0")).getText(); //Текст первого вопроса
-        assertEquals( homeLocator.expectedFirstQuestionText, firstQuestionText); //сравнивает текст
-
+        assertEquals(mainPage.expectedFirstQuestionText, firstQuestionText); //сравнивает текст
     }
 
     @Test
     public void testSecondQuestion() {
 
-        HomeLocator homeLocator = new HomeLocator(driver);
-        PageFactory.initElements(driver, homeLocator);
-        homeLocator.openPage();
-        homeLocator.scrollToimportantQuestionsDiv();
+        MainPage mainPage = new MainPage(driver);
+        PageFactory.initElements(driver, mainPage);
+        mainPage.openPage();
+        mainPage.scrollToimportantQuestionsDiv();
 
 
-        homeLocator.clickButtonSecondQuestion();  //кликает в тесте по второму вопросу
+        mainPage.clickButtonSecondQuestion();  //кликает в тесте по второму вопросу
         String secondQuestionText = driver.findElement(By.xpath("//*[@id=\"accordion__panel-1\"]/p")).getText(); //Текст 2 элемента
-        assertEquals(homeLocator.expectedSecondQuestionText, secondQuestionText);// сравнивает текст
-        }
+        assertEquals(mainPage.expectedSecondQuestionText, secondQuestionText);// сравнивает текст
+    }
 
     @Test
     public void testThirdQuestion() {
 
-        HomeLocator homeLocator = new HomeLocator(driver);
-        PageFactory.initElements(driver, homeLocator);
-        homeLocator.openPage();
-        homeLocator.scrollToimportantQuestionsDiv();
+        MainPage mainPage = new MainPage(driver);
+        PageFactory.initElements(driver, mainPage);
+        mainPage.openPage();
+        mainPage.scrollToimportantQuestionsDiv();
 
-        homeLocator.clickButtonThirdQuestion();  //кликает в тесте по третьему вопросу
+        mainPage.clickButtonThirdQuestion();  //кликает в тесте по третьему вопросу
         String thirdQuestionText = driver.findElement(By.xpath("//*[@id=\"accordion__panel-2\"]/p")).getText();  //Текст 3 вопроса
-        assertEquals(homeLocator.expectedThirdQuestionText, thirdQuestionText);
+        assertEquals(mainPage.expectedThirdQuestionText, thirdQuestionText);
     }
-
-
 
     @Test
     public void testFourthQuestion() {
 
-        HomeLocator homeLocator = new HomeLocator(driver);
-        PageFactory.initElements(driver, homeLocator);
-        homeLocator.openPage();
-        homeLocator.scrollToimportantQuestionsDiv();
+        MainPage mainPage = new MainPage(driver);
+        PageFactory.initElements(driver, mainPage);
+        mainPage.openPage();
+        mainPage.scrollToimportantQuestionsDiv();
 
-        homeLocator.clickButtonFourthQuestion();  //кликает в тесте по четвертом вопросу
+        mainPage.clickButtonFourthQuestion();  //кликает в тесте по четвертом вопросу
         String fourthQuestionText = driver.findElement(By.xpath("//*[@id=\"accordion__panel-3\"]/p")).getText();   //текст 4 вопроса
-        assertEquals(homeLocator.expectedFourthQuestionText, fourthQuestionText);
-
+        assertEquals(mainPage.expectedFourthQuestionText, fourthQuestionText);
     }
 
     @Test
     public void testFifthQuestion() {
-        HomeLocator homeLocator = new HomeLocator(driver);
-        PageFactory.initElements(driver, homeLocator);
-        homeLocator.openPage();
-        homeLocator.scrollToimportantQuestionsDiv();
 
+        MainPage mainPage = new MainPage(driver);
+        PageFactory.initElements(driver, mainPage);
+        mainPage.openPage();
+        mainPage.scrollToimportantQuestionsDiv();
 
-        homeLocator.clickButtonFifthQuestion();  //кликает в тесте по пятому вопросу
+        mainPage.clickButtonFifthQuestion();  //кликает в тесте по пятому вопросу
         String fifthQuestionText = driver.findElement(By.xpath("//*[@id=\"accordion__panel-4\"]/p")).getText();  //Текст 5 вопроса
-        assertEquals(homeLocator.expectedFifthQuestionText, fifthQuestionText);
-
+        assertEquals(mainPage.expectedFifthQuestionText, fifthQuestionText);
     }
 
     @Test
     public void testSixthQuestion() {
-        HomeLocator homeLocator = new HomeLocator(driver);
-        PageFactory.initElements(driver, homeLocator);
-        homeLocator.openPage();
-        homeLocator.scrollToimportantQuestionsDiv();
 
-        homeLocator.clickButtonSixthQuestion();  //кликает в тесте по шестому вопросу
+        MainPage mainPage = new MainPage(driver);
+        PageFactory.initElements(driver, mainPage);
+        mainPage.openPage();
+        mainPage.scrollToimportantQuestionsDiv();
+
+        mainPage.clickButtonSixthQuestion();  //кликает в тесте по шестому вопросу
         String sixthQuestionText = driver.findElement(By.xpath("//*[@id=\"accordion__panel-5\"]/p")).getText();  //Текст 6 вопроса
-        assertEquals(homeLocator.expectedSixthQuestionText, sixthQuestionText);
-
+        assertEquals(mainPage.expectedSixthQuestionText, sixthQuestionText);
     }
 
     @Test
     public void testSeventhQuestion() {
-        HomeLocator homeLocator = new HomeLocator(driver);
-        PageFactory.initElements(driver, homeLocator);
-        homeLocator.openPage();
-        homeLocator.scrollToimportantQuestionsDiv();
 
-        homeLocator.clickButtonSeventhQuestion();  //кликает в тесте по седьмому вопросу
+        MainPage mainPage = new MainPage(driver);
+        PageFactory.initElements(driver, mainPage);
+        mainPage.openPage();
+        mainPage.scrollToimportantQuestionsDiv();
+
+        mainPage.clickButtonSeventhQuestion();  //кликает в тесте по седьмому вопросу
         String seventhQuestionText = driver.findElement(By.xpath("//*[@id=\"accordion__panel-6\"]/p")).getText();  //Текст 7 вопроса
-        assertEquals(homeLocator.expectedSeventhQuestionText, seventhQuestionText);
-
+        assertEquals(mainPage.expectedSeventhQuestionText, seventhQuestionText);
     }
-
-
 
     @Test
     public void testEightQuestion() {
-        HomeLocator homeLocator = new HomeLocator(driver);
-        PageFactory.initElements(driver, homeLocator);
-        homeLocator.openPage();
-        homeLocator.scrollToimportantQuestionsDiv();
 
-        homeLocator.clickButtonEightQuestion();  //кликает в тесте по восьмому вопросу
+        MainPage mainPage = new MainPage(driver);
+        PageFactory.initElements(driver, mainPage);
+        mainPage.openPage();
+        mainPage.scrollToimportantQuestionsDiv();
+
+        mainPage.clickButtonEightQuestion();  //кликает в тесте по восьмому вопросу
         String eightQuestionText = driver.findElement(By.xpath("//*[@id=\"accordion__panel-7\"]/p")).getText();  //Текст 8 вопроса
-        assertEquals(homeLocator.expectedEightQuestionText, eightQuestionText); //сравнение
-
+        assertEquals(mainPage.expectedEightQuestionText, eightQuestionText); //сравнение
     }
 }
